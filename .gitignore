@@ -8,3 +8,4 @@ npm-debug.log
 /.idea
 src/keys.js
 src/keys.js
+src/api_key.js
