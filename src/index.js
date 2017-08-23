@@ -1,11 +1,16 @@
 import React  from 'react';
 import ReactDOM from 'react-dom';
-import API_KEY from './keys'
 
+import API_KEY from './api_key';
+import SearchBar from './components/search_bar';
 
 // create a new component. this will produce some html
 const App = () => {
-  return <div>Hi over here!</div>;
+  return (
+      <div>
+        <SearchBar />
+      </div>
+  );
 }
 
 //create instance referencing div container
