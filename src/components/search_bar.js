@@ -4,22 +4,33 @@ import React, {Component} from 'react';
 class SearchBar extends Component {
 
   //initialize state within class based componenet
-  //automatically called within class when rendered
+  //automatically called within class when instance is rendered
   constructor(props) {
-  //part of Component that this extends
+  //super is part of Component that this extends
     super(props);
 
     //initialize variable term within a new object
     this.state = {term: ''};
+
+    //bind
+    this.onInputChange = this.onInputChange.bind(this);
   }
 
     render() {
-      return <input onChange={this.onInputChange} />;
+      return (
+        <div>
+          <input onChange={this.onInputChange} />
+            Value of the input: {this.state.term}
+        </div>
+      );
+      //alt way of doing this
+      //return <input onChange={event => this.setState({ term: event.target.value })} />;
     }
 
   //do this code whenever something changes within input
     onInputChange(event){
-      console.log(event.target.value)
+      //console.log(event.target.value)
+      this.setState({ term: event.target.value })
     }
   }
 
