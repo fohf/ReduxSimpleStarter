@@ -10,17 +10,17 @@ class SearchBar extends Component {
     super(props);
 
     //initialize variable term within a new object
-    this.state = {term: ''};
+    this.state = {term: 'butthole'};
 
-    //bind
+    //bind the two "this" sdfsdf
     this.onInputChange = this.onInputChange.bind(this);
   }
 
     render() {
       return (
         <div>
-          <input onChange={this.onInputChange} />
-            Value of the input: {this.state.term}
+          <input value={this.state.term} onChange={this.onInputChange} />
+            <p>Value of the input: {this.state.term}</p>
         </div>
       );
       //alt way of doing this
