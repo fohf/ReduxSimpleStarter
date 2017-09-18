@@ -20,7 +20,7 @@ class SearchBar extends Component {
       return (
         <div>
           <input value={this.state.term} onChange={this.onInputChange} />
-            <p>Value of the input: {this.state.term}</p>
+            <p>input: {this.state.term}</p>
         </div>
       );
       //alt way of doing this
